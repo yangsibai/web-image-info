@@ -1,0 +1,18 @@
+{
+  "name": "Image info",
+  "manifest_version": 2,
+  "version": "0.1.0",
+  "description": "Get image info: width, height, size",
+  "icons": {
+    "128": "icons/128.png"
+  },
+  "browser_action": {
+    "default_title": "Image info",
+    "default_icon": "icons/24.png"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "css": ["/style.css"],
+    "js": ["/jquery-2.0.3.min.js", "/index.js"]
+  }]
+}

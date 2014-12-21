@@ -1,0 +1,7 @@
+#web-image-info {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #fff;
+    z-index: 999999;
+}
