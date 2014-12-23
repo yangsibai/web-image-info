@@ -1,7 +1,11 @@
 #web-image-info {
+    color: #333;
+    background-color: #ddd;
+    padding: 5px 10px;
+    height: 14px;
+    font-size: 14px;
     position: fixed;
     left: 0px;
     top: 0px;
-    border: 1px solid #fff;
     z-index: 999999;
 }
