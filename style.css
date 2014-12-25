@@ -1,9 +1,9 @@
 #web-image-info {
-    color: #333;
-    background-color: #ddd;
+    color: #333 !important;
+    background-color: #ddd !important;
     padding: 5px 10px;
-    height: 14px;
-    font-size: 14px;
+    height: 24px !important;
+    font-size: 14px !important;
     position: fixed;
     left: 0px;
     top: 0px;
