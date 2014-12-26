@@ -1,11 +1,15 @@
 #web-image-info {
     color: #333 !important;
     background-color: #ddd !important;
-    padding: 5px 10px;
-    height: 24px !important;
-    font-size: 14px !important;
+    padding: 5px 10px !important;
+    height: 14px !important;
     position: fixed;
     left: 0px;
     top: 0px;
     z-index: 999999;
+    font-size: 14px !important;
+    line-height: 14px !important;
+    margin: auto 0 !important;
+    display: block !important;
+    box-sizing: content-box !important;
 }

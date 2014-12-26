@@ -38,8 +38,8 @@ _handleMove = (e)->
 showSize = (data)->
     _db[data.src] = data
     sizeInfo = data.width + "x" + data.height
-    info = sizeInfo + "&nbsp;&nbsp;" + (data.length / 1024).toFixed(2) + "k"
+    info = sizeInfo + "  " + (data.length / 1024).toFixed(2) + "k"
     if $("#web-image-info").length > 0
-        $("#web-image-info").html(info).show()
+        $("#web-image-info").text(info).show()
     else
         $("body").append("<div id=\"web-image-info\">" + info + "</div>")
