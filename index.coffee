@@ -1,7 +1,22 @@
+showImageInfoEnable = false
+
+_handleBackgroundNotify = (enable)->
+    unless enable
+        $("#web-image-info").remove()
+    showImageInfoEnable = enable
+
+
+chrome.runtime.sendMessage
+    cmd: 'check enable'
+, _handleBackgroundNotify
+
+chrome.runtime.onMessage.addListener _handleBackgroundNotify
+
 _enableHandler = true
 
 $(document).ready ->
     $(document).mousemove (e)->
+        return unless showImageInfoEnable
         if _enableHandler
             _handleMove(e)
             _enableHandler = false
