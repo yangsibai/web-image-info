@@ -16,10 +16,12 @@ _toggle = (_enable)->
 
 _toggle(enable)
 
-chrome.browserAction.onClicked.addListener (tab)->
+chrome.browserAction.onClicked.addListener ->
     enable = not enable
     localStorage['enable'] = enable
-    chrome.tabs.sendMessage(tab.id, enable)
+    chrome.tabs.query {}, (tabs)->
+        for tab in tabs
+            chrome.tabs.sendMessage(tab.id, enable)
     _toggle(enable)
 
 chrome.runtime.onMessage.addListener (request, sender, sendMessage)->

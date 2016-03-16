@@ -28,10 +28,18 @@
 
   _toggle(enable);
 
-  chrome.browserAction.onClicked.addListener(function(tab) {
+  chrome.browserAction.onClicked.addListener(function() {
     enable = !enable;
     localStorage['enable'] = enable;
-    chrome.tabs.sendMessage(tab.id, enable);
+    chrome.tabs.query({}, function(tabs) {
+      var i, len, results, tab;
+      results = [];
+      for (i = 0, len = tabs.length; i < len; i++) {
+        tab = tabs[i];
+        results.push(chrome.tabs.sendMessage(tab.id, enable));
+      }
+      return results;
+    });
     return _toggle(enable);
   });
 
