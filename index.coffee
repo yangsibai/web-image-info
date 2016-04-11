@@ -28,8 +28,10 @@ setInterval ->
 _currentSrc = ""
 _canLoad = true
 _db = {}
+_currentInfo = ''
 _handleMove = (e)->
     if e.target.nodeName isnt "IMG"
+        _currentInfo = ''
         $("#web-image-info").hide()
     else if _canLoad and e.target.src
         width = e.target.naturalWidth
@@ -68,6 +70,8 @@ showSize = (data)->
     else
         info = sizeInfo
     if $("#web-image-info").length > 0
-        $("#web-image-info").text(info).show()
+        if info isnt _currentInfo
+            _currentInfo = info
+            $("#web-image-info").text(info).show()
     else
         $("body").append("<div id=\"web-image-info\">" + info + "</div>")
