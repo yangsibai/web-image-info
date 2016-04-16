@@ -1,5 +1,6 @@
 $imageInfo = $("<div id=\"web-image-info\"></div>")
 $("body").append($imageInfo)
+$imageInfo.hide()
 
 _currentSrc = ""
 _canLoad = true
