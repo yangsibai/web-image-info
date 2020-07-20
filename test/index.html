@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Test Image info</title>
-  <style>
-    html, body {
-      height: 200%;
-      width: 200%;
-      background: #F0F0F0;
-      overflow: scroll;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Image info</title>
+    <style>
+      html,
+      body {
+        height: 200%;
+        width: 200%;
+        background: #f0f0f0;
+        overflow: scroll;
+      }
 
-    .top-left {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+      .top-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
 
-    .top-right {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  </style>
-</head>
-<body>
-<div>
-  <img class="top-left" src="./test.png" alt="test.png">
-</div>
-<img class="top-right" src="./test2.png" alt="">
-</body>
+      .top-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img class="top-left" src="./test.png" alt="test.png" />
+    </div>
+    <div>
+      <img class="top-right" src="./test2.png" alt="" />
+    </div>
+    <div style="position: absolute;top:0;left:200px;width: 200px;height:200px;background: url(./test2.png)"></div>
+  </body>
 </html>
